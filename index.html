@@ -19,25 +19,25 @@
         <div class="form-buttons">
             <div class="form-columns">
                 <label>Book Title</label>
-                <input>
+                <input type="text" id="title" name="title">
             </div>
             <div class="form-columns">
-                <label>Author</label>
-                <input>
+                <label for="author">Author</label>
+                <input type="text" id="author" name="author">
             </div>
             <div class="form-columns">
-                <label>Pages</label>
-                <input type="number" min="10" max="5000">
+                <label for="pages">Pages</label>
+                <input type="number" min="10" max="5000" id="pages" name="pages">
             </div>
             <div class="form-columns drop-down-menu">
-                <label>Status</label>
-                <select>
+                <label for="status">Status</label>
+                <select id="status" name="status">
                     <option>Read</option>
                     <option>Not read</option>
                 </select>            
             </div>
         </div>
-        <button class="submit-button">Submit</button>
+        <button class="submit-button" id="submit-button">Submit</button>
     </form>
     <div class="main-library-table">
         <table>
