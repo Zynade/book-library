@@ -2,7 +2,9 @@ let libraryArray;
 const DEFAULT_LIBRARY_INFO = [
     {title:"Penpal", author:"Dathan Auerbach", pages:250, hasBeenRead:true},
     {title:"How to Do Your Mom", author:"nilzilla", pages:68, hasBeenRead:false},
-    {title:"Introduction to English", author:"Narendra Modi", pages:420, hasBeenRead:true}
+    {title:"Introduction to English", author:"Narendra Modi", pages:420, hasBeenRead:false},
+    {title:"The Tale of a Wimpy Kiddo", author:"Bach Helsinki", pages: 234, hasBeenRead:true},
+    {title:"Rich Dad Poor Dad", author:"Greg F. Kennedy", pages:164, hasBeenRead:false}
 ];
 
 const titleField = document.querySelector('#title');
@@ -22,7 +24,7 @@ submitButton.addEventListener('click', () => {
 resetButton.addEventListener('click', () => {
     titleField.value = "";
     authorField.value = "";
-    pagesField.value = "";e
+    pagesField.value = "";
     // readStatusField.value = "none";
 }
 )
@@ -31,7 +33,7 @@ function Book(title, author, pages) {
     this.title = title;
     this.author = author;
     this.pages = pages;
-    this.hasBeenRead = true;
+    this.hasBeenRead = false;
     this.readInfo = () => this.hasBeenRead ? 'Read' : 'Not read';
 }
 
@@ -41,6 +43,7 @@ function addBookToLibrary() {
     }
     else {
         const book = new Book(titleField.value, authorField.value, pagesField.value);
+        book.hasBeenRead = readStatusField.value === "read" ? true : false;
         libraryArray.push(book);
         updateLocalStorage();
     }
@@ -101,7 +104,7 @@ function displayAllBooks() {
             <td>${book.author}</td>
             <td>${book.pages}</td>
             <td><button class="read-status-button" data-index="${index}">${book.hasBeenRead ? 'Read' : 'Not read'}</button></td>
-            <td><button class="button delete-button" data-index="${index}">delete</button></td>
+            <td><button class="button delete-button" data-index="${index}">Delete</button></td>
         `;
         const newTr = document.createElement('tr');
         newTr.innerHTML = htmlBook;

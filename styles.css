@@ -1,5 +1,6 @@
 * {
     margin: 2%;
+    background-color: #eeeeee;
 }
 
 .heading h1, .heading p {
@@ -25,7 +26,7 @@
     display: flex;
     justify-content: center;
     background-color: rgb(255, 159, 15);
-    color: white;
+    color: black;
     font-weight: bold;
     border-radius: 20px;
     text-align: center;
@@ -55,7 +56,11 @@
 }
 
 th, td {
-    padding: 10px 50px;
+    padding: 5px 45px;
     border-bottom: 2px solid #E1E1E1;
     text-align: left;
+}
+
+th {
+    font-size: 110%;
 }
