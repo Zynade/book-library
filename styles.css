@@ -1,0 +1,44 @@
+* {
+    margin: 2%;
+}
+
+.heading h1, .heading p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.form-buttons {
+    display: flex;
+    /* justify-content:space-between; */
+    width:3px;
+}
+
+.form-columns {
+    display: flex;
+    flex-direction: column;
+}
+
+.drop-down-menu select {
+    padding: 5%;
+}
+
+.delete-button, .submit-button {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(255, 159, 15);
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    text-align: center;
+    padding: 26px;
+}
+
+.submit-button {
+    background-color: rgb(0, 255, 55, 155);
+    color: black;
+}
+
+th, td {
+    padding: 30px 50px;
+    border-bottom: 2px solid #E1E1E1;
+    text-align: left;
+}
