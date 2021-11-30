@@ -15,10 +15,10 @@
         read and which ones you have on your wishlist. This website was made as a project
         for The Odin Project.</p>
     </div>
-    <form action>
+    <form>
         <div class="form-buttons">
             <div class="form-columns">
-                <label>Book Title</label>
+                <label for="title">Book Title</label>
                 <input type="text" id="title" name="title">
             </div>
             <div class="form-columns">
@@ -30,14 +30,18 @@
                 <input type="number" min="10" max="5000" id="pages" name="pages">
             </div>
             <div class="form-columns drop-down-menu">
-                <label for="status">Status</label>
-                <select id="status" name="status">
-                    <option>Read</option>
-                    <option>Not read</option>
+                <label for="read-status">Status</label>
+                <select id="read-status" name="read-status">
+                    <option value = "none" selected disabled hidden>Select an Option</option>
+                    <option value="read">Read</option>
+                    <option value="not-read">Not read</option>
                 </select>
             </div>
         </div>
-        <button type="submit" class="submit-button" id="submit-button">Submit</button>
+        <div class="buttons-div">
+            <button type="reset" class="button" id="reset-button">Reset</button>
+            <button class="submit button" id="submit-button">Submit</button>
+        </div>
     </form>
     <div class="main-library-table">
         <table>
