@@ -21,7 +21,7 @@
     padding: 5%;
 }
 
-.delete-button, .submit-button {
+.button {
     display: flex;
     justify-content: center;
     background-color: rgb(255, 159, 15);
@@ -32,13 +32,30 @@
     padding: 26px;
 }
 
-.submit-button {
-    background-color: rgb(0, 255, 55, 155);
+.submit {
+    background-color: rgba(0, 255, 55, 155);
     color: black;
 }
 
+.read-status {
+    min-width: 400px;
+}
+
+.read-status-button {
+    padding: 10px;
+    background-color: #e1e1e1;
+}
+.read-status-button-green {
+    background-color: rgba(0, 255, 55, 155);
+    background-color: black;
+}
+
+.buttons-div {
+    display: flex;
+}
+
 th, td {
-    padding: 30px 50px;
+    padding: 10px 50px;
     border-bottom: 2px solid #E1E1E1;
     text-align: left;
 }
