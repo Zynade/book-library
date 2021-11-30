@@ -15,6 +15,24 @@ const tableBody = document.querySelector('#library-table-body');
 const submitButton = document.querySelector('#submit-button');
 const resetButton = document.querySelector('#reset-button');
 
+const table = document.querySelector('table').addEventListener('click', e => {
+    let index = e.target.dataset.index;
+    let classList = Array.from(e.target.classList);
+    if (classList.includes('delete-button')) {
+        removeBook(index);
+    }
+    else if (classList.includes('read-status-button')) {
+        let status = toggleReadStatus(index);
+        
+        if (status) {
+            e.target.classList.add('read-status-button-green');
+        }
+        else {
+            e.target.classList.remove('read-status-button-green');
+        }
+    }
+    updateLocalStorage();
+});
 
 submitButton.addEventListener('click', () => {
     addBookToLibrary();
@@ -113,18 +131,3 @@ function displayAllBooks() {
 }
 
 displayAllBooks();
-
-const table = document.querySelector('table').addEventListener('click', e => {
-    let index = e.target.dataset.index;
-    let classList = Array.from(e.target.classList);
-    if (classList.includes('delete-button')) {
-        removeBook(index);
-    }
-    else if (classList.includes('read-status-button')) {
-        let status = toggleReadStatus(index);
-        
-        if (status) e.target.classList.add('read-status-button-green');
-        else e.target.classList.remove('read-status-button-green');
-    }
-    updateLocalStorage();
-})
