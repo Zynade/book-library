@@ -16,19 +16,41 @@
         for The Odin Project.</p>
     </div>
     <form action>
-        <div class="form-columns">
-            
+        <div class="form-buttons">
+            <div class="form-columns">
+                <label>Book Title</label>
+                <input>
+            </div>
+            <div class="form-columns">
+                <label>Author</label>
+                <input>
+            </div>
+            <div class="form-columns">
+                <label>Pages</label>
+                <input type="number" min="10" max="5000">
+            </div>
+            <div class="form-columns drop-down-menu">
+                <label>Status</label>
+                <select>
+                    <option>Read</option>
+                    <option>Not read</option>
+                </select>            
+            </div>
         </div>
-        <div class="form-columns">
-            
-        </div>
-        <div class="form-columns drop-down-menu">
-            
-        </div>
-        <input type="button" class="submit-button">submit</input>
+        <button class="submit-button">Submit</button>
     </form>
     <div class="main-library-table">
-
+        <table>
+            <thead>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Pages</th>
+                <th>Read status</th>
+                <th></th>
+            </thead>
+            <tbody id="library-table-body">
+            </tbody>
+        </table>
     </div>
 
 </body>
